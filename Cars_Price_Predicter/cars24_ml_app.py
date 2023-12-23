@@ -46,3 +46,14 @@ if(st.button("Predict Price")):
 st.dataframe(cars_df.head())
 
 
+# adding my name
+c1, c2, c3, c4 = st.columns(4)
+with c4:
+    st.markdown(
+        """
+        ---
+        **Made by :-** *Swapnil G.*
+        """
+    )
+
+
