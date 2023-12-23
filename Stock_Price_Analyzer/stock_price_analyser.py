@@ -50,3 +50,16 @@ st.write(
     """
 )
 st.line_chart(ticker_df.Volume)
+
+# adding my name
+c1, c2, c3, c4 = st.columns(4)
+with c4:
+    st.markdown(
+        """
+        ---
+        **Made by :-** *Swapnil G.*
+        """
+    )
+
+
+    
