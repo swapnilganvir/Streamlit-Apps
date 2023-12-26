@@ -1,4 +1,4 @@
-pandas
-streamlit
-pickle
+pandas==1.5.2
+streamlit==1.11.0
+pickle==4.0
 
