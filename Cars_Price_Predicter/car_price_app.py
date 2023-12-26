@@ -24,7 +24,7 @@ encode_dict = {
 def model_pred(fuel_type, transmission_type, engine, seller_type):
 
     # loading the model
-    with open(dir/'Cars_Price_Predicter/car_pred.pkl', mode = 'rb') as file:
+    with open(path/'Cars_Price_Predicter/car_pred.pkl', mode = 'rb') as file:
         reg_model = pickle.load(file)
 
     input_features = [[2018.0, seller_type, 40000, fuel_type, transmission_type, 19.70, engine, 86.3]]
