@@ -2,7 +2,11 @@ import pandas as pd
 import streamlit as st
 import pickle
 
-cars_df = pd.read_csv("./Cars_Price_predicter/car-price.csv")
+from pathlib import Path
+
+path = Path.cwd()
+
+cars_df = pd.read_csv(path/'Cars_Price_Predicter/car-price.csv')
 
 st.write(
     """
@@ -20,7 +24,7 @@ encode_dict = {
 def model_pred(fuel_type, transmission_type, engine, seller_type):
 
     # loading the model
-    with open('./Cars_Price_predicter/car_pred.pkl', mode = 'rb') as file:
+    with open(dir/'Cars_Price_Predicter/car_pred.pkl', mode = 'rb') as file:
         reg_model = pickle.load(file)
 
     input_features = [[2018.0, seller_type, 40000, fuel_type, transmission_type, 19.70, engine, 86.3]]
