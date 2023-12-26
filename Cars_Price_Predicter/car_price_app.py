@@ -2,7 +2,7 @@ import pandas as pd
 import streamlit as st
 import pickle
 
-cars_df = pd.read_csv("car-price.csv")
+cars_df = pd.read_csv("./car-price.csv")
 
 st.write(
     """
